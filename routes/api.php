@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\ZaloController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/ngay-phong-thuy', [ApiController::class, 'AuspiciousDay']);
+// Route::get('/ngay-phong-thuy', [ApiController::class, 'AuspiciousDay']);
 
-
+Route::get('/zalo/profile', [ZaloController::class, 'getProfile']);
